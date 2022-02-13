@@ -1,10 +1,33 @@
-# chrome-extesion-manifest-json-schema
-> Chrome extension manifest JSON schema (V2 and V3)
+[action-image]: https://github.com/cezaraugusto/chrome-extension-manifest-schemas/workflows/CI/badge.svg
+[action-url]: https://github.com/cezaraugusto/chrome-extension-manifest-schemas/actions
+[npm-image]: https://img.shields.io/npm/v/chrome-extension-manifest-schemas.svg
+[npm-url]: https://npmjs.org/package/chrome-extension-manifest-schemas
 
-* [V3](schema_v2.json) includes the current Chrome implementation with specific backwards-compatibility according to the Chrome team.
-* [V2](schema_v2.json) includes the legacy Manifest V2 Chrome implementation possibly expired or with an expiring date soon.
+# chrome-extension-manifest-schemas [![workflow][action-image]][action-url] [![npm][npm-image]][npm-url]
+
+> Chrome extension manifest JSON schemas (V2 and V3)
+
+Json schemas for Chrome extension manifest files. Information about json schemas can be found at
+[json-schema.org](http://json-schema.org/).
+
+## What's included?
+
+* [V3](manifest/manifest.schema.v3.json) includes the current Chrome implementation with specific backwards-compatibility according to the Chrome team.
+* [V2](manifest/manifest.schema.v2.json) includes the legacy Manifest V2 Chrome implementation possibly expired or with an expiring date soon.
 
 Source code on schemastore: https://json.schemastore.org/chrome-manifest
+
+## Usage
+
+You can either point to [V3](manifest/manifest.schema.v3.json) or [V2](manifest/manifest.schema.v2.json) schemas, or get it by the Node.js interface.
+
+```js
+const {manifestV2Schema, manifestV3Schema} = require('chrome-extension-manifest-schemas')
+
+console.log(manifestV3Schema)
+```
+
+## Outputs:
 
 ```json
 {

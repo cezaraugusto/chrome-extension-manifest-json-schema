@@ -1,0 +1,46 @@
+{
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cezaraugusto/chrome-extension-manifest-schemas.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "name": "chrome-extension-manifest-schemas",
+  "version": "0.0.0",
+  "description": "JSON schemas for Chrome Extesions Manifest files",
+  "main": "module.js",
+  "author": {
+    "name": "Cezar Augusto",
+    "email": "boss@cezaraugusto.net",
+    "url": "https://cezaraugusto.net"
+  },
+  "scripts": {
+    "prettier": "prettier **/**/*.{md,js,json} --write",
+    "test": "jasmine"
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "tabWidth": 2
+  },
+  "files": [
+    "module.js"
+  ],
+  "keywords": [
+    "browser",
+    "chrome",
+    "extension",
+    "schemas",
+    "schema",
+    "json",
+    "manifest",
+    "v3",
+    "v2"
+  ],
+  "devDependencies": {
+    "jasmine": "^4.0.2",
+    "jsonschema": "^1.4.0",
+    "prettier": "^1.14.2"
+  }
+}
