@@ -1,9 +1,9 @@
-[action-image]: https://github.com/cezaraugusto/chrome-extension-manifest-schemas/workflows/CI/badge.svg
-[action-url]: https://github.com/cezaraugusto/chrome-extension-manifest-schemas/actions
-[npm-image]: https://img.shields.io/npm/v/chrome-extension-manifest-schemas.svg
-[npm-url]: https://npmjs.org/package/chrome-extension-manifest-schemas
+[action-image]: https://github.com/cezaraugusto/chrome-extesion-manifest-json-schema/workflows/CI/badge.svg
+[action-url]: https://github.com/cezaraugusto/chrome-extesion-manifest-json-schema/actions
+[npm-image]: https://img.shields.io/npm/v/chrome-extesion-manifest-json-schema.svg
+[npm-url]: https://npmjs.org/package/chrome-extesion-manifest-json-schema
 
-# chrome-extension-manifest-schemas [![workflow][action-image]][action-url] [![npm][npm-image]][npm-url]
+# chrome-extesion-manifest-json-schema [![workflow][action-image]][action-url] [![npm][npm-image]][npm-url]
 
 > Chrome extension manifest JSON schemas (V2 and V3)
 
@@ -21,7 +21,7 @@ Source code on [schemastore](https://json.schemastore.org/chrome-manifest).
 You can either point to [V3](manifest/manifest.schema.v3.json) or [V2](manifest/manifest.schema.v2.json) schemas or get it by the Node.js interface.
 
 ```js
-const {manifestV2Schema, manifestV3Schema} = require('chrome-extension-manifest-schemas')
+const {manifestV2Schema, manifestV3Schema} = require('chrome-extesion-manifest-json-schema')
 
 console.log(manifestV3Schema)
 ```
