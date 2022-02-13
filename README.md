@@ -5,9 +5,9 @@
 
 # chrome-extesion-manifest-json-schema [![workflow][action-image]][action-url] [![npm][npm-image]][npm-url]
 
-> Chrome extension manifest JSON schemas (V2 and V3)
+> JSON schemas for Chrome extension manifest files (V2 and V3) with support for Node.js
 
-JSON schemas for Chrome extension manifest files. For more information about JSON schemas, see [json-schema.org](http://json-schema.org/).
+JSON schemas for Chrome extension manifest files. For info about JSON schemas, see [json-schema.org](http://json-schema.org/).
 
 ## What's included?
 

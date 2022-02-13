@@ -9,7 +9,7 @@
   },
   "name": "chrome-extesion-manifest-json-schema",
   "version": "0.1.0",
-  "description": "JSON schemas for Chrome Extesions Manifest files",
+  "description": "JSON schemas for Chrome extension manifest files (V2 and V3) with support for Node.js",
   "main": "module.js",
   "author": {
     "name": "Cezar Augusto",
