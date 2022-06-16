@@ -36,7 +36,7 @@ const invalidManifest = [
 
 const isValid = (instance) => validate(instance, manifestV3Schema).valid
 
-describe("Valid Chrome Extesion Manifest JSON Schema", function() {
+describe("Valid Chrome extension Manifest JSON Schema", function() {
   fs.readdirSync(path.resolve(__dirname, 'fixtures')).forEach((dirNext) => {
     const manifestPath = path.resolve(__dirname, 'fixtures', dirNext)
     const manifest = require(manifestPath)
