@@ -18,8 +18,10 @@
   },
   "scripts": {
     "prettier": "prettier **/**/*.{md,js,json} --write",
-    "test": "jasmine"
+    "test": "jasmine",
+    "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance"
   },
+  "publishConfig": { "provenance": true },
   "prettier": {
     "proseWrap": "always",
     "tabWidth": 2

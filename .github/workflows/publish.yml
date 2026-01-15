@@ -1,0 +1,48 @@
+name: publish
+
+permissions:
+  contents: write
+  id-token: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: np version type (patch/minor/major)
+        required: true
+        default: patch
+      distTag:
+        description: npm dist-tag (latest,next,canary)
+        required: false
+        default: latest
+
+jobs:
+  publish:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install deps
+        run: pnpm install --no-frozen-lockfile
+      - name: Configure npm auth
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          npm whoami || true
+      - name: Publish with np (provenance enabled)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ inputs.distTag }}" != "latest" ]; then TAG_ARGS="--tag ${{ inputs.distTag }}"; fi
+          npx np "${{ inputs.version }}" --no-tests --any-branch --yolo --message "release: %s" --provenance $TAG_ARGS
+
+
