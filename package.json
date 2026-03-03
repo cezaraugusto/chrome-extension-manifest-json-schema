@@ -1,5 +1,6 @@
 {
   "license": "MIT",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/cezaraugusto/chrome-extension-manifest-json-schema.git"
