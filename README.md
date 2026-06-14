@@ -15,10 +15,10 @@ JSON schemas for Chrome extension manifest files. For info about JSON schemas, s
 
 ## What's included?
 
-* [V3](manifest/manifest.schema.v3.json) - includes the current Chrome implementation with specific backward compatibility according to the Chrome team.
-* [V2](manifest/manifest.schema.v2.json) - includes the legacy Manifest V2 Chrome implementation possibly expired or with an expiring date soon.
+* [V3](manifest/manifest.schema.v3.json) - the current target. Tracks the modern Manifest V3 surface, including `action`, `background.service_worker`, `host_permissions`/`optional_host_permissions`, the object form of `web_accessible_resources` and `content_security_policy`, `declarative_net_request`, `side_panel`, `cross_origin_embedder_policy`/`cross_origin_opener_policy`, and the `world` / `match_origin_as_fallback` content-script keys.
+* [V2](manifest/manifest.schema.v2.json) - Manifest V2, kept for archival validation only. Chrome removed Manifest V2 support entirely in Chrome 139 (mid-2025); new extensions must use V3.
 
-Source code on [schemastore](https://json.schemastore.org/chrome-manifest).
+This is an independently maintained schema that follows the official [Chrome manifest reference](https://developer.chrome.com/docs/extensions/reference/manifest). The community [SchemaStore](https://json.schemastore.org/chrome-manifest) schema is a related project; this package aims to stay current with newer Chrome fields and is consumable directly from Node.js.
 
 ## Usage
 
@@ -54,4 +54,4 @@ console.log(manifestV3Schema)
 
 ## License
 
-Public domain
+MIT (c) Cezar Augusto
