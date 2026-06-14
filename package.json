@@ -5,10 +5,10 @@
     "url": "https://github.com/cezaraugusto/chrome-extension-manifest-json-schema.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
   },
   "name": "chrome-extension-manifest-json-schema",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "JSON schemas for Chrome extension manifest files (V2 and V3) with support for Node.js",
   "main": "module.js",
   "author": {
@@ -17,33 +17,34 @@
     "url": "https://cezaraugusto.net"
   },
   "scripts": {
-    "prettier": "prettier **/**/*.{md,js,json} --write",
     "test": "jasmine",
     "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance"
   },
-  "publishConfig": { "provenance": true },
-  "prettier": {
-    "proseWrap": "always",
-    "tabWidth": 2
+  "publishConfig": {
+    "provenance": true
   },
   "files": [
     "module.js",
     "manifest"
   ],
   "keywords": [
-    "browser",
     "chrome",
     "extension",
-    "schemas",
-    "schema",
-    "json",
     "manifest",
-    "v3",
-    "v2"
+    "manifest-v3",
+    "mv3",
+    "manifest.json",
+    "browser-extension",
+    "webextension",
+    "json-schema",
+    "schema",
+    "validation",
+    "autocomplete"
   ],
   "devDependencies": {
-    "jasmine": "^4.0.2",
-    "jsonschema": "^1.4.0",
-    "prettier": "^1.14.2"
-  }
+    "ajv": "^8.17.1",
+    "jasmine": "^5.4.0",
+    "jsonschema": "^1.4.1"
+  },
+  "packageManager": "pnpm@9.9.0"
 }
