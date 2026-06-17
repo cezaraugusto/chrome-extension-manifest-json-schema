@@ -3,5 +3,5 @@ const manifestV3Schema = require('./manifest/manifest.schema.v3.json')
 
 module.exports = {
   manifestV2Schema,
-  manifestV3Schema,
+  manifestV3Schema
 }

@@ -3,6 +3,7 @@
 // exercised. The legacy jsonschema runner does not evaluate draft-07
 // conditionals, so these would silently pass without real validation.
 const Ajv = require('ajv')
+
 const manifestV3Schema = require('../manifest/manifest.schema.v3.json')
 
 const ajv = new Ajv({strict: false, allowUnionTypes: true})
@@ -11,8 +12,8 @@ const isValid = (manifest) => validate(manifest)
 
 const base = {manifest_version: 3, name: 'Test', version: '1.0.0'}
 
-describe('Modern MV3 manifest fields', function () {
-  it('accepts a complete modern MV3 manifest', function () {
+describe('Modern MV3 manifest fields', () => {
+  it('accepts a complete modern MV3 manifest', () => {
     expect(
       isValid({
         ...base,
@@ -46,7 +47,7 @@ describe('Modern MV3 manifest fields', function () {
     ).toBeTrue()
   })
 
-  it('accepts content_scripts with world ISOLATED/MAIN', function () {
+  it('accepts content_scripts with world ISOLATED/MAIN', () => {
     expect(
       isValid({...base, content_scripts: [{matches: ['<all_urls>'], world: 'ISOLATED'}]})
     ).toBeTrue()
@@ -55,17 +56,17 @@ describe('Modern MV3 manifest fields', function () {
     ).toBeTrue()
   })
 
-  it('accepts the userScripts permission', function () {
+  it('accepts the userScripts permission', () => {
     expect(isValid({...base, permissions: ['userScripts']})).toBeTrue()
   })
 
-  it('rejects an unknown content_scripts property', function () {
+  it('rejects an unknown content_scripts property', () => {
     expect(
       isValid({...base, content_scripts: [{matches: ['<all_urls>'], bogus: true}]})
     ).toBeFalse()
   })
 
-  it('rejects a non-boolean match_origin_as_fallback', function () {
+  it('rejects a non-boolean match_origin_as_fallback', () => {
     expect(
       isValid({
         ...base,
@@ -74,19 +75,19 @@ describe('Modern MV3 manifest fields', function () {
     ).toBeFalse()
   })
 
-  it('rejects a declarative_net_request ruleset missing path', function () {
+  it('rejects a declarative_net_request ruleset missing path', () => {
     expect(
       isValid({...base, declarative_net_request: {rule_resources: [{id: 'a', enabled: true}]}})
     ).toBeFalse()
   })
 
-  it('rejects an invalid world value', function () {
+  it('rejects an invalid world value', () => {
     expect(
       isValid({...base, content_scripts: [{matches: ['<all_urls>'], world: 'SANDBOX'}]})
     ).toBeFalse()
   })
 
-  it('rejects a manifest missing required name', function () {
+  it('rejects a manifest missing required name', () => {
     expect(isValid({manifest_version: 3, version: '1.0.0'})).toBeFalse()
   })
 })
