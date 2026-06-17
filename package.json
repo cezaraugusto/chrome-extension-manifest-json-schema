@@ -18,7 +18,9 @@
   },
   "scripts": {
     "test": "jasmine",
-    "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance"
+    "publish:provenance": "np patch --no-tests --any-branch --yolo --message 'release: %s' --provenance",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "publishConfig": {
     "provenance": true
@@ -43,6 +45,8 @@
   ],
   "devDependencies": {
     "ajv": "^8.17.1",
+    "eslint": "^10.5.0",
+    "eslint-config-auditor": "workspace:*",
     "jasmine": "^5.4.0",
     "jsonschema": "^1.4.1"
   },
