@@ -60,6 +60,14 @@ console.log(manifestV3Schema)
 
 For automatic `manifest.json` validation and autocompletion in your editor, install the companion [VS Code extension](https://marketplace.visualstudio.com/items?itemName=cezaraugusto.vscode-chrome-extension-manifest-json-schema), which binds this schema to your manifest files.
 
+## Related projects
+
+* [browser-extension-manifest-fields](https://github.com/cezaraugusto/browser-extension-manifest-fields)
+* [browser-extension-capabilities](https://github.com/cezaraugusto/browser-extension-capabilities)
+* [browser-extension-compat-data](https://github.com/cezaraugusto/browser-extension-compat-data)
+* [extension-from-store](https://github.com/cezaraugusto/extension-from-store)
+* [parse5-asset-patcher](https://github.com/cezaraugusto/parse5-asset-patcher)
+
 ## License
 
 MIT (c) Cezar Augusto.
