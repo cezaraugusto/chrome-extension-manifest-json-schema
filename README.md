@@ -18,6 +18,12 @@ JSON schemas for Chrome extension manifest files. For info about JSON schemas, s
 
 This is an independently maintained schema that follows the official [Chrome manifest reference](https://developer.chrome.com/docs/extensions/reference/manifest). The community [SchemaStore](https://json.schemastore.org/chrome-manifest) schema is a related project; this package aims to stay current with newer Chrome fields and is consumable directly from Node.js.
 
+## Install
+
+```sh
+npm install chrome-extension-manifest-json-schema
+```
+
 ## Usage
 
 You can either point to [V3](manifest/manifest.schema.v3.json) or [V2](manifest/manifest.schema.v2.json) schemas or get it by the Node.js interface.
@@ -49,6 +55,10 @@ console.log(manifestV3Schema)
   }
 }
 ```
+
+## Editor support
+
+For automatic `manifest.json` validation and autocompletion in your editor, install the companion [VS Code extension](https://marketplace.visualstudio.com/items?itemName=cezaraugusto.vscode-chrome-extension-manifest-json-schema), which binds this schema to your manifest files.
 
 ## License
 
