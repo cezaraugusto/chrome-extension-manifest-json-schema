@@ -50,5 +50,7 @@
     "jasmine": "^5.4.0",
     "jsonschema": "^1.4.1"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@9.9.0",
+  "bugs": "https://github.com/cezaraugusto/chrome-extension-manifest-json-schema/issues",
+  "homepage": "https://github.com/cezaraugusto/chrome-extension-manifest-json-schema#readme"
 }
