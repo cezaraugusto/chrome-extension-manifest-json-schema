@@ -4,10 +4,12 @@
 [npm-downloads-url]: https://www.npmjs.com/package/chrome-extension-manifest-json-schema
 [action-image]: https://github.com/cezaraugusto/chrome-extension-manifest-json-schema/actions/workflows/ci.yml/badge.svg?branch=main
 [action-url]: https://github.com/cezaraugusto/chrome-extension-manifest-json-schema/actions
+[provenance-image]: https://img.shields.io/badge/provenance-verified-0971fe?logo=npm&logoColor=white
+[provenance-url]: https://www.npmjs.com/package/chrome-extension-manifest-json-schema
 
 > JSON schemas for Chrome extension manifest files (V2 and V3) with support for Node.js
 
-# chrome-extension-manifest-json-schema [![Version][npm-version-image]][npm-version-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![workflow][action-image]][action-url]
+# chrome-extension-manifest-json-schema [![Version][npm-version-image]][npm-version-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![workflow][action-image]][action-url] [![provenance][provenance-image]][provenance-url]
 
 JSON schemas for Chrome extension manifest files. For info about JSON schemas, see [json-schema.org](http://json-schema.org/).
 
